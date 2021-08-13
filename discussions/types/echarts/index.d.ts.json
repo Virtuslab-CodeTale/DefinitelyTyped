@@ -1,0 +1,90 @@
+[
+  {
+    "id" : "8cb3a26b-b646-44fe-9dc0-74b479cd0e4e",
+    "prId" : 55047,
+    "prUrl" : "https://github.com/DefinitelyTyped/DefinitelyTyped/pull/55047#pullrequestreview-727677083",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e41ff129-4a90-4760-9132-b8a5301b1477",
+        "parentId" : null,
+        "authorId" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "body" : "Does `TextStyleWithRich` have a `color` property to omit?",
+        "createdAt" : "2021-08-10T21:00:01Z",
+        "updatedAt" : "2021-08-10T21:14:31Z",
+        "lastEditedBy" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "18f17485-7bb5-45a1-99ab-d8234b3def85",
+        "parentId" : "e41ff129-4a90-4760-9132-b8a5301b1477",
+        "authorId" : "21da1d0b-430a-434a-9367-559faad6c770",
+        "body" : "interface TextStyleWithRich extends TextStyle，interface TextStyle extends BaseTextStyle，interface BaseTextStyle has a **color** property",
+        "createdAt" : "2021-08-11T01:44:57Z",
+        "updatedAt" : "2021-08-11T01:44:57Z",
+        "lastEditedBy" : "21da1d0b-430a-434a-9367-559faad6c770",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e1f535b8-d714-4eb1-bae4-be5fc7edf9ee",
+        "parentId" : "e41ff129-4a90-4760-9132-b8a5301b1477",
+        "authorId" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "body" : "Oops, I was looking at `BaseTextStyleWithRich` instead of `TextStyleWithRich`.",
+        "createdAt" : "2021-08-11T16:06:36Z",
+        "updatedAt" : "2021-08-11T16:06:36Z",
+        "lastEditedBy" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5bbc8d154e89806f1d0be8167d931d671b5c592d",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +1583,1587 @@                 * @todo describe\n                 */\n                interface Label extends Omit<TextStyleWithRich,'color'> {\n                    color?: string | ((val:string) => EChartOption.Color) | undefined;\n                    show?: boolean | undefined;"
+  },
+  {
+    "id" : "393e2dc4-bbc0-4b07-9fc9-cdc28ac80e3e",
+    "prId" : 55047,
+    "prUrl" : "https://github.com/DefinitelyTyped/DefinitelyTyped/pull/55047#pullrequestreview-727678840",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "137c4443-09b8-4e82-9ab7-3ad6a52843ba",
+        "parentId" : null,
+        "authorId" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "body" : "I would find a test showing an example usage helpful.",
+        "createdAt" : "2021-08-10T21:13:38Z",
+        "updatedAt" : "2021-08-10T21:14:31Z",
+        "lastEditedBy" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6d025d77-bef1-4211-8f8b-cb297bf781ca",
+        "parentId" : "137c4443-09b8-4e82-9ab7-3ad6a52843ba",
+        "authorId" : "21da1d0b-430a-434a-9367-559faad6c770",
+        "body" : "![image](https://user-images.githubusercontent.com/62184079/128957599-6d2626f5-26b0-4118-a8ac-c64ccc036150.png)\r\n",
+        "createdAt" : "2021-08-11T01:53:25Z",
+        "updatedAt" : "2021-08-11T01:53:25Z",
+        "lastEditedBy" : "21da1d0b-430a-434a-9367-559faad6c770",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "60e23eb7-7905-4ac9-8820-781a527a5170",
+        "parentId" : "137c4443-09b8-4e82-9ab7-3ad6a52843ba",
+        "authorId" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "body" : "I actually meant in echarts-tests.ts.",
+        "createdAt" : "2021-08-11T16:08:16Z",
+        "updatedAt" : "2021-08-11T16:08:16Z",
+        "lastEditedBy" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5bbc8d154e89806f1d0be8167d931d671b5c592d",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +1584,1588 @@                 */\n                interface Label extends Omit<TextStyleWithRich,'color'> {\n                    color?: string | ((val:string) => EChartOption.Color) | undefined;\n                    show?: boolean | undefined;\n                    interval?: number | Function | undefined;"
+  }
+]
