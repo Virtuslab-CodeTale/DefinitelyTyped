@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "c84cb0fc-3fd9-4113-a309-78a4daf3f9bd",
+    "prId" : 55092,
+    "prUrl" : "https://github.com/DefinitelyTyped/DefinitelyTyped/pull/55092#pullrequestreview-727919262",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "742ea7ac-9648-4cca-93b8-05673001d012",
+        "parentId" : null,
+        "authorId" : "889aa791-06c6-4e14-90d4-8e19d2ddb2b0",
+        "body" : "hehe, I doubt this is the way a mere mortal does this :D",
+        "createdAt" : "2021-08-11T20:19:16Z",
+        "updatedAt" : "2021-08-11T20:19:16Z",
+        "lastEditedBy" : "889aa791-06c6-4e14-90d4-8e19d2ddb2b0",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "801f6da5d24c3763bb5c452773934ca1e648bdeb",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +9,13 @@\nconst el = document.querySelector('#editor');\nif (el instanceof HTMLElement) {\n    BuildDecoupled.create(el)\n        .then(editor => {"
+  }
+]

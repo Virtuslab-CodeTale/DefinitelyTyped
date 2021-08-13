@@ -1,0 +1,46 @@
+[
+  {
+    "id" : "85b7f512-626e-4dd3-80c7-93bc6471fd79",
+    "prId" : 55084,
+    "prUrl" : "https://github.com/DefinitelyTyped/DefinitelyTyped/pull/55084#pullrequestreview-729143692",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f9869b68-67f2-47e3-a2b9-f535dc7438f4",
+        "parentId" : null,
+        "authorId" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "body" : "`some_key_value_map`?",
+        "createdAt" : "2021-08-12T16:51:40Z",
+        "updatedAt" : "2021-08-12T16:54:07Z",
+        "lastEditedBy" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6880e491-ec75-4acb-8153-559934ede713",
+        "parentId" : "f9869b68-67f2-47e3-a2b9-f535dc7438f4",
+        "authorId" : "7e61eb01-f3d1-4a55-b06f-d1a36170dd49",
+        "body" : "`Map` is automatically added by protoc at the end of the field name like `List` on `repeated` fields. See line 28 and 61.",
+        "createdAt" : "2021-08-12T16:57:08Z",
+        "updatedAt" : "2021-08-12T17:02:45Z",
+        "lastEditedBy" : "7e61eb01-f3d1-4a55-b06f-d1a36170dd49",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "de20f386-b1e1-4591-9abe-6ed147498ee6",
+        "parentId" : "f9869b68-67f2-47e3-a2b9-f535dc7438f4",
+        "authorId" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "body" : "Interesting.",
+        "createdAt" : "2021-08-12T23:06:43Z",
+        "updatedAt" : "2021-08-12T23:08:23Z",
+        "lastEditedBy" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fa7ebc0ad9fd76a45847d17197db2a514cabbb5f",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +43,47 @@   google.protobuf.Type some_type = 14;\n   google.protobuf.DoubleValue some_double_value = 15;\n   map<int32, string> some_key_value = 16;\n   map<string, MyTestObject> some_more_complex_key_value = 17;\n }"
+  }
+]

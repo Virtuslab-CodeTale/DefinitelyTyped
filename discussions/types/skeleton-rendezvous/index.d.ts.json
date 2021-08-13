@@ -1,0 +1,101 @@
+[
+  {
+    "id" : "384af188-d1cf-4a9d-a057-0ea8eea469dd",
+    "prId" : 55099,
+    "prUrl" : "https://github.com/DefinitelyTyped/DefinitelyTyped/pull/55099#pullrequestreview-729813238",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ee5f634a-b553-4a4a-b49b-ab32bf7064ac",
+        "parentId" : null,
+        "authorId" : "f0821d07-7fb4-4408-8e34-e4775e103e75",
+        "body" : "```suggestion\r\n    findSite(key: string, salt?: string | number): string;\r\n```\r\n\r\n(the salt is technically anything that has a .toString() method)\r\n\r\nhttps://github.com/SocketCluster/skeleton-rendezvous/blob/master/index.js#L122",
+        "createdAt" : "2021-08-12T23:08:32Z",
+        "updatedAt" : "2021-08-12T23:10:01Z",
+        "lastEditedBy" : "f0821d07-7fb4-4408-8e34-e4775e103e75",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5335a76c-a4c1-4e07-8dde-409953178857",
+        "parentId" : "ee5f634a-b553-4a4a-b49b-ab32bf7064ac",
+        "authorId" : "0bb684c7-c529-448d-af56-1a3869316d6b",
+        "body" : "This one is not too obvious to me.\r\n\r\nI didn't include it because they don't use the second argument anywhere in the tests.\r\n\r\nAnd in the implementation there is incrementing the `salt` by one:\r\nhttps://github.com/SocketCluster/skeleton-rendezvous/blob/master/index.js#L150\r\nBut then there is also concatenating the `salt` with strings:\r\nhttps://github.com/SocketCluster/skeleton-rendezvous/blob/master/index.js#L153",
+        "createdAt" : "2021-08-13T04:29:33Z",
+        "updatedAt" : "2021-08-13T04:29:34Z",
+        "lastEditedBy" : "0bb684c7-c529-448d-af56-1a3869316d6b",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "abe8581a-9ed2-4dbf-8fc2-72448b9f734e",
+        "parentId" : "ee5f634a-b553-4a4a-b49b-ab32bf7064ac",
+        "authorId" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "body" : "My reading of the JS code is `findSite(key:string, salt?: number)`, but I'm not familiar with the library or how it's used in practice.",
+        "createdAt" : "2021-08-13T16:31:33Z",
+        "updatedAt" : "2021-08-13T16:31:33Z",
+        "lastEditedBy" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9698d8e7-eeb1-487a-b09a-a66721ae113a",
+        "parentId" : "ee5f634a-b553-4a4a-b49b-ab32bf7064ac",
+        "authorId" : "0bb684c7-c529-448d-af56-1a3869316d6b",
+        "body" : "I've been using this library for quite some time, but I too have no idea of what the `salt` arg stands for. My hypothesis is that it is some internal thing maybe, since this method calls itself recursively with this arg.\n\nSo I think we can omit it for now, and maybe add it later if there's demand.",
+        "createdAt" : "2021-08-13T17:02:54Z",
+        "updatedAt" : "2021-08-13T17:02:55Z",
+        "lastEditedBy" : "0bb684c7-c529-448d-af56-1a3869316d6b",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1deb09df-1a91-41f1-a6d5-6e516c29e944",
+        "parentId" : "ee5f634a-b553-4a4a-b49b-ab32bf7064ac",
+        "authorId" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "body" : "Fine by me.",
+        "createdAt" : "2021-08-13T17:03:50Z",
+        "updatedAt" : "2021-08-13T17:03:50Z",
+        "lastEditedBy" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b7e9b5a1e70d282a5392fc11dbc1a8dd2fe40c34",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +21,25 @@    addSites(sites: string[]): void;\n    removeSites(sites: string | string[]): void;\n    findSite(key: string): string;\n    hash(key: string): string;\n}"
+  },
+  {
+    "id" : "7be342e6-2e23-4de6-b0b7-b575d19947d3",
+    "prId" : 55099,
+    "prUrl" : "https://github.com/DefinitelyTyped/DefinitelyTyped/pull/55099#pullrequestreview-729253354",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "fcc0b9b4-cdbd-46f4-afc8-55e5be79b10b",
+        "parentId" : null,
+        "authorId" : "f0821d07-7fb4-4408-8e34-e4775e103e75",
+        "body" : "Worth adding the `hash(key: string): string;` method?\r\n\r\nhttps://github.com/SocketCluster/skeleton-rendezvous/blob/master/index.js#L26",
+        "createdAt" : "2021-08-12T23:09:09Z",
+        "updatedAt" : "2021-08-12T23:10:01Z",
+        "lastEditedBy" : "f0821d07-7fb4-4408-8e34-e4775e103e75",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e86edca4-3d35-4745-ba28-da521344c369",
+        "parentId" : "fcc0b9b4-cdbd-46f4-afc8-55e5be79b10b",
+        "authorId" : "0bb684c7-c529-448d-af56-1a3869316d6b",
+        "body" : "Done",
+        "createdAt" : "2021-08-13T04:31:41Z",
+        "updatedAt" : "2021-08-13T04:31:41Z",
+        "lastEditedBy" : "0bb684c7-c529-448d-af56-1a3869316d6b",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b7e9b5a1e70d282a5392fc11dbc1a8dd2fe40c34",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +15,19 @@\n// eslint-disable-next-line no-redeclare\ndeclare class SkeletonRendezvousHasher {\n    constructor(options?: SkeletonRendezvousHasher.Options);\n    getSites(): string[];"
+  }
+]

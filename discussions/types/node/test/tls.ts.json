@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "c1357a9c-71ff-4a3a-ac2d-368653b8130c",
+    "prId" : 55051,
+    "prUrl" : "https://github.com/DefinitelyTyped/DefinitelyTyped/pull/55051#pullrequestreview-726460238",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2e700a93-35ea-4f67-96a8-8dedcd92acde",
+        "parentId" : null,
+        "authorId" : "45d9c670-2241-42ab-8e9e-9388e528c740",
+        "body" : "```suggestion\r\n            cb(new Error('Not found'));\r\n            cb(new Error('Not found'), undefined);\r\n```",
+        "createdAt" : "2021-08-10T13:47:52Z",
+        "updatedAt" : "2021-08-10T13:47:52Z",
+        "lastEditedBy" : "45d9c670-2241-42ab-8e9e-9388e528c740",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "853a0e7f274efb69f8fec7aaec178b2fb972c8bd",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +309,313 @@        SNICallback: (servername: string, cb: (err: Error | null, ctx?: SecureContext) => void): void => {\n            cb(new Error('Not found'));\n            cb(new Error('Not found'), undefined);\n            cb(null, undefined);\n            cb(null, ctx);"
+  }
+]

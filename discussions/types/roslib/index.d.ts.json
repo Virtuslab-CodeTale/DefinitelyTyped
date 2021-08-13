@@ -53,5 +53,49 @@
     "commit" : "6f5e96a2983ebe3026ffdaf93a447fa757bd0da6",
     "line" : 510,
     "diffHunk" : "@@ -1,1 +604,608 @@                orientation?: QuaternionLike | null;\n            } | null,\n        );\n\n        /**"
+  },
+  {
+    "id" : "4bc924dd-db6c-4171-b0dd-c4225e2fd246",
+    "prId" : 55066,
+    "prUrl" : "https://github.com/DefinitelyTyped/DefinitelyTyped/pull/55066#pullrequestreview-729139988",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b9cd1060-48fa-4fef-8b32-d6506ef8d2d2",
+        "parentId" : null,
+        "authorId" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "body" : "Should the default be `ServiceRequest` to match the old behavior?",
+        "createdAt" : "2021-08-11T23:25:30Z",
+        "updatedAt" : "2021-08-11T23:26:51Z",
+        "lastEditedBy" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f0c9e921-14d1-4aa4-9f80-ee75e4702a07",
+        "parentId" : "b9cd1060-48fa-4fef-8b32-d6506ef8d2d2",
+        "authorId" : "0922f2f4-c59f-46bb-9143-826c0da896d7",
+        "body" : "The issue is that https://github.com/DefinitelyTyped/DefinitelyTyped/pull/55066/files#diff-726d2dc6f8cec1d3206d29c4e5f5207d9b7ca4e967c7295abca636e6976ddb1cL324 is typed as `any` rather than `ServiceRequest`. Defaulting the generic to `any` keeps it backwards compatible whereas doing `TServiceRequest = ServiceRequest` causes the tests to fail on line [87](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/725f962de94a26a880a34a0f6e0d277b7512e68a/types/roslib/roslib-tests.ts#L87):\r\n```\r\nERROR: 87:20  expect  TypeScript@4.4 compile error: \r\nProperty 'a' does not exist on type 'ServiceRequest'.\r\nERROR: 87:28  expect  TypeScript@4.4 compile error: \r\nProperty 'b' does not exist on type 'ServiceRequest'.\r\n```",
+        "createdAt" : "2021-08-12T05:42:23Z",
+        "updatedAt" : "2021-08-12T05:42:23Z",
+        "lastEditedBy" : "0922f2f4-c59f-46bb-9143-826c0da896d7",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "91902a23-efbf-4aa7-bdce-5f90b06c3faa",
+        "parentId" : "b9cd1060-48fa-4fef-8b32-d6506ef8d2d2",
+        "authorId" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "body" : "You could try `TServiceRequest extends ServiceRequest = any` but it looks like `ServiceRequest` has no properties, so it doesn't really matter.",
+        "createdAt" : "2021-08-12T22:58:53Z",
+        "updatedAt" : "2021-08-12T22:58:53Z",
+        "lastEditedBy" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "725f962de94a26a880a34a0f6e0d277b7512e68a",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +284,288 @@\n    export class Service <\n        TServiceRequest = any,\n        TServiceResponse = any\n    > {"
   }
 ]

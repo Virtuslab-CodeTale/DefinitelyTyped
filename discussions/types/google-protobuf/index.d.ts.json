@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "0bfcb998-0f14-4719-9f2b-7a37b01d6e85",
+    "prId" : 55084,
+    "prUrl" : "https://github.com/DefinitelyTyped/DefinitelyTyped/pull/55084#pullrequestreview-729143692",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9d181668-8393-4121-a290-b2f7c58e250b",
+        "parentId" : null,
+        "authorId" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "body" : "Dropping the `BinaryWriter` seems like a pretty big change.  Can you provide some more details on why that was appropriate?",
+        "createdAt" : "2021-08-12T16:54:00Z",
+        "updatedAt" : "2021-08-12T16:54:07Z",
+        "lastEditedBy" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a56c0731-697d-4b70-bb45-50ead4d5cce1",
+        "parentId" : "9d181668-8393-4121-a290-b2f7c58e250b",
+        "authorId" : "7e61eb01-f3d1-4a55-b06f-d1a36170dd49",
+        "body" : "It was a mistake by me, it was the `this` argument that you pass as first argument to `.call()`. Now, it reflects the interface of all the `writeInt32`, `writeString`, `writeBytes`, etc. methods in class `BinaryWriter`. All of them expect two arguments, the field number and the value.",
+        "createdAt" : "2021-08-12T17:15:19Z",
+        "updatedAt" : "2021-08-12T17:21:11Z",
+        "lastEditedBy" : "7e61eb01-f3d1-4a55-b06f-d1a36170dd49",
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6c57ef15-168f-4f65-9115-419e5abbf3d7",
+        "parentId" : "9d181668-8393-4121-a290-b2f7c58e250b",
+        "authorId" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "body" : "Thanks for clarifying!  As you say, it's good to write tests. :smile:",
+        "createdAt" : "2021-08-12T23:07:13Z",
+        "updatedAt" : "2021-08-12T23:08:23Z",
+        "lastEditedBy" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fa7ebc0ad9fd76a45847d17197db2a514cabbb5f",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +196,200 @@    fieldNumber: number,\n    writer: BinaryWriter,\n    keyWriterFn: (field: number, key: K) => void,\n    valueWriterFn: (field: number, value: V, writerCallback: BinaryWriteCallback) => void,\n    writeCallback?: BinaryWriteCallback"
+  },
+  {
+    "id" : "881c590a-170b-4ec0-8b1a-ef7e282a227d",
+    "prId" : 55084,
+    "prUrl" : "https://github.com/DefinitelyTyped/DefinitelyTyped/pull/55084#pullrequestreview-729785959",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "de681f71-c582-4e1f-9089-028e18e06732",
+        "parentId" : null,
+        "authorId" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "body" : "Without knowing anything about this API, I would have guessed that \"defaultValue\" was the correct name, since it seems odd to pass a value to a value reader.",
+        "createdAt" : "2021-08-13T16:27:53Z",
+        "updatedAt" : "2021-08-13T16:28:10Z",
+        "lastEditedBy" : "e5ae6fc6-9e2b-4b96-8480-7066f2f51e54",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fa7ebc0ad9fd76a45847d17197db2a514cabbb5f",
+    "line" : 38,
+    "diffHunk" : "@@ -1,1 +204,208 @@    reader: BinaryReader,\n    keyReaderFn: (reader: BinaryReader) => K,\n    valueReaderFn: (reader: BinaryReader, value: any, readerCallback: BinaryReadCallback) => V,\n    readCallback?: BinaryReadCallback,\n    defaultKey?: K,"
+  }
+]

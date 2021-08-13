@@ -1,0 +1,24 @@
+[
+  {
+    "id" : "fce13919-a354-4f66-9494-901ef416d9c1",
+    "prId" : 55075,
+    "prUrl" : "https://github.com/DefinitelyTyped/DefinitelyTyped/pull/55075#pullrequestreview-727282238",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6b4cc480-72bc-4895-96bf-0e5ecee19252",
+        "parentId" : null,
+        "authorId" : "a3c70f18-c8d4-490d-b1b0-182a41fd6d98",
+        "body" : "These interfaces have almost the same structure. It would be better to extract properties, which exists in `BootstrapSelectOptions` and `BootstrapSelectDefaults`, into base type/interface. ",
+        "createdAt" : "2021-08-11T09:51:50Z",
+        "updatedAt" : "2021-08-11T09:51:51Z",
+        "lastEditedBy" : "a3c70f18-c8d4-490d-b1b0-182a41fd6d98",
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f420c74cf97b89c209d46762ba64fc89caed2487",
+    "line" : 40,
+    "diffHunk" : "@@ -1,1 +9,13 @@\ninterface BootstrapSelectOptions {\n    actionsBox: boolean;\n    container: string | boolean;\n    countSelectedText: string | ((numSelected: number, numTotal: number) => string);"
+  }
+]
